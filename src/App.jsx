@@ -26,8 +26,9 @@ function App() {
   };
 
   return (
-    <ErrorBoundary> {/* Оборачиваем приложение в ErrorBoundary */}
+    <ErrorBoundary> {}
       <BrowserRouter>
+        <Header/>
         <Routes>
           <Route path='/' element={<Main todos={todos} setTodos={setTodos} addTodo={addTodo} deleteTodo={deleteTodo} newTodo={newTodo} setNewTodo={setNewTodo} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />} />
           <Route path='/Contact' element={<Contact />} />
@@ -53,7 +54,6 @@ function Header() {
 function Main({ todos, addTodo, deleteTodo, newTodo, setNewTodo, darkTheme ,setDarkTheme}) {
   return (
     <>
-      <Header />
       <h2>Головна</h2>
       <input
         type="text"
@@ -78,7 +78,6 @@ function Main({ todos, addTodo, deleteTodo, newTodo, setNewTodo, darkTheme ,setD
 function Contact() {
   return (
     <>
-      <Header/>
       <h1>Контакти</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quidem eligendi, iusto nihil, aut, laudantium animi rem quo ea consequuntur voluptatibus illum! Qui quaerat ut consectetur totam!</p>
     </>
@@ -88,7 +87,6 @@ function Contact() {
 function About() {
   return (
     <>
-      <Header/>
       <h1>Про мене:</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quidem eligendi, iusto nihil, aut, laudantium animi rem quo ea consequuntur voluptatibus illum! Qui quaerat ut consectetur totam!</p>
     </>
